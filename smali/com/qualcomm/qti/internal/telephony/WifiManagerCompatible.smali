@@ -17,23 +17,12 @@
     .locals 1
 
     .line 13
-    sget-boolean v0, Lmiui/os/Build;->IS_GLOBAL_BUILD:Z
+    const v0, 1
 
     return v0
 .end method
 
 .method public static setSARLimit(Landroid/content/Context;I)V
-    .locals 1
-    .param p0, "context"    # Landroid/content/Context;
-    .param p1, "set"    # I
-
-    .line 9
-    invoke-static {p0}, Landroid/net/wifi/MiuiWifiManager;->getInstance(Landroid/content/Context;)Landroid/net/wifi/MiuiWifiManager;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Landroid/net/wifi/MiuiWifiManager;->setSARLimit(I)V
-
-    .line 10
+    .locals 0
     return-void
 .end method
